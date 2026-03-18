@@ -1,0 +1,17 @@
+rules:
+  - name: "High Value Transaction"
+    condition: "amount > 10000"
+    score_impact: 30
+    rationale: "Transaction amount exceeds high value threshold."
+  - name: "Unusual Location"
+    condition: "location == 'remote' and user_history_location != 'remote'"
+    score_impact: 25
+    rationale: "Transaction from an unusual geographical location."
+  - name: "New Customer"
+    condition: "customer_age_days < 30"
+    score_impact: 15
+    rationale: "Transaction from a newly registered customer."
+
+
+
+
